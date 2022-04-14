@@ -10,7 +10,7 @@ $(document).ready(function(){
             res.forEach(element => {
                 item = `${element.name} `
                 console.log(item)
-                user.append(item)
+                user.append(item);
             });
             
         })
