@@ -5,9 +5,12 @@ $(document).ready(function(){
         .then((res) => res.json())
         .then((res) => {
             const user = document.getElementById('users')
+            let item = ''
             console.log(res)
             res.forEach(element => {
-                user.innerHTML = `${element.name}`
+                item = `${element.name} `
+                console.log(item)
+                user.append(item)
             });
             
         })
