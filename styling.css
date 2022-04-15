@@ -17,3 +17,10 @@ li {
     color: white;
 }
 
+strong {
+    font-size: large;
+}
+
+#users {
+    font-size: larger;
+}
