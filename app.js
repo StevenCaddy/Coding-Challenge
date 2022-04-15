@@ -6,33 +6,27 @@ $(document).ready(() => {
         .then((res) => {
             const user = document.getElementById('users')
             let item = ''
-            //console.log(res)
             res.forEach(element => {
                 item = `${element.name} `
                 const li = document.createElement("li")
                 li.innerHTML = item
                 li.classList.add('item');
                 li.dataset.userId = element.id;
-                console.log(item)
                 li.addEventListener('click', (event) => postRequest(event))
-                    user.appendChild(li);
+                user.appendChild(li);
             });
-
-            
         })
         .catch((err) => console.error(err));
     }
 
     const postRequest = (event) => {
-            const userId = event.target.dataset.userId;
-    
+            const userId = event.target.dataset.userId;   
             fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
                 .then((res) => res.json())
                 .then(json => renderPosts(json, event.target))
         }
     
-    const renderPosts = (posts, target) => {
-        
+    const renderPosts = (posts, target) => {    
         clear();
 
         const list = document.createElement("ul");
@@ -50,18 +44,14 @@ $(document).ready(() => {
             item.appendChild(liBody);
             list.appendChild(item);
         }
-
         $('#posts').append(target.appendChild(list));
     }
 
     const clear = () => {
-        $('#posts').empty();
-        
+        $('#posts').empty();   
     }
 
     request();
-
-    
   
   });
 
