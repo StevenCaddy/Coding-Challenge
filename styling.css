@@ -4,7 +4,16 @@ body {
     text-align: center;
 }
 
+h1 {
+    font-size: x-large;
+}
+
 h2 {
     color: white;
     text-align: center;
 }
+
+li {
+    color: white;
+}
+
