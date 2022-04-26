@@ -17,6 +17,11 @@ li {
     color: white;
 }
 
+table, td {
+    color: white;
+    border: 1px solid white;
+}
+
 strong {
     font-size: large;
 }

@@ -8,12 +8,12 @@ $(document).ready(() => {
             let item = ''
             res.forEach(element => {
                 item = `${element.name} `
-                const li = document.createElement("li")
-                li.innerHTML = item
-                li.classList.add('item');
-                li.dataset.userId = element.id;
-                li.addEventListener('click', (event) => postRequest(event))
-                user.appendChild(li);
+                const td = document.createElement("td")
+                td.innerHTML = item
+                td.classList.add('item');
+                td.dataset.userId = element.id;
+                td.addEventListener('click', (event) => postRequest(event))
+                user.appendChild(td);
             });
         })
         .catch((err) => console.error(err));
